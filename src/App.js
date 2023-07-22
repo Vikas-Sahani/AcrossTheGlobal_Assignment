@@ -1,7 +1,9 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
+import Nav from "./components/Nav/Nav.jsx";
+import Hero from "./components/Hero//Hero.jsx";
+import MidSection from "./components/MidSection/MidSection.jsx";
+import APIinstance from "./components/APIinstance/APIinstance.jsx";
 
 const App = () => {
   return (
@@ -10,9 +12,9 @@ const App = () => {
         {/* navbar */}
         <Nav />
         <Hero />
+        <MidSection />
 
-        {/* img with text */}
-        {/* img with text */}
+        <APIinstance />
       </div>
     </>
   );

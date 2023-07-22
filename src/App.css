@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
   border: 1px solid red;
-  background-color: #E9ECEF;
+  background-color: #ffffff;
 }
 
 nav{
@@ -23,7 +23,7 @@ nav{
   height: 24px;
 }
 
-#whole>img{
+img{
   height: 100%;
   width: 100%;
 }
@@ -56,10 +56,11 @@ nav{
   font-weight: 700;
 }
 
-.register>select{
+select{
   height: 24px;
   width: 24px;
   border: none;
+  background-color: transparent;
 }
 .heroImg{
   width: 1440px;
@@ -73,4 +74,58 @@ nav{
   left: 270px;
   width: 378px;
   color: white;
+}
+
+.heroLine{
+  width: 1296px;
+  top: 544px;
+  left: 72px;
+  border: 1px solid  #E0E0E0;
+}
+
+.writePost{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 133px; 
+  height: 36px;
+  border-radius: 4px;
+  background-color: #EDEEF0;
+  padding-top: 10px;
+
+}
+
+.joinGrp{
+  display: flex;
+  justify-content: space-around;
+  width: 125px;
+  height: 36px;
+  border-radius: 4px;
+  background: #2F6CE5;
+  color: white;
+  padding-top: 3px;
+}
+
+.joinGrp>.image{
+  height: 22px;
+  width: 22px;
+}
+
+.card{
+  width: 692px;
+  /* height: 472px; */
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.cardImg{
+  width: 692px;
+  height: 220px;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.avtarImg{
+  width: 48px;
+  height: 48px;
+  border-radius: 24px
 }
