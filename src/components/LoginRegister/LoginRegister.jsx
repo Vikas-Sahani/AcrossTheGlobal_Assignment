@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import clear from "../SideComponent/images/clear24px.svg"
 import LogRegImg from "./images/LogRegImg.svg"
 import fbLogo from "./images/fbLogo.svg"
 import gglLogo from "./images/googleLogo.svg"
 
 function LoginRegister() {
+    const [isLogin, setIsLogin] = useState(false);
   return (
     <>
         <div className='LogRegPg'>
@@ -18,13 +19,21 @@ function LoginRegister() {
                 <div className='createAcc'>
                     <div className='SignUpform'>
                         <form>
-                            <h1>Create Account</h1>
-                            <input type='text' placeholder='First Name'/>
-                            <input type='text' placeholder='Last Name'/>
-                            <input type='text' placeholder='Email'/>
-                            <input type='text' placeholder='Password'/>
-                            <input type='text' placeholder='Confirm Password'/>
-                            <button>Create Account</button>
+                            {isLogin?<h1>Sign In</h1>:<h1>Create Account</h1>}
+                            
+                            {isLogin?<>
+                                <input type='text' placeholder='Email'/>
+                                <input type='text' placeholder='Password'/>
+                            </>:
+                            <>
+                                <input type='text' placeholder='First Name'/>
+                                <input type='text' placeholder='Last Name'/>
+                                <input type='text' placeholder='Email'/>
+                                <input type='text' placeholder='Password'/>
+                                <input type='text' placeholder='Confirm Password'/>
+                            </>}
+                            
+                            <button>{isLogin?"Sign in":"Create Account"}</button>
 
                             <div className='fbgglLogo'>
                                 <span className='size'>
@@ -38,16 +47,21 @@ function LoginRegister() {
                                 </span>
                                 <p>Sign up with Google</p>
                             </div>
+                            {isLogin?<p style={{textAlign:"center", margin:"2% 0%", cursor:"pointer"}}>Forgot Password?</p>:""}
+                            
                         </form>
                         
                     </div>
                     <div className='logRegImg'>
-                        <p>Already have an account? <span>Sign In</span></p>
+                        {isLogin?
+                        <p>Don’t have an account yet?<span> Create new for free!</span></p>:
+                        <p>Already have an account? <span>Sign In</span></p>}
+                        
                         <div>
                             <img src={LogRegImg} alt='logRegImg'/>
                         </div>
-                        <p>By signing up, you agree to our Terms & conditions, Privacy policy</p>
-
+                        {isLogin?"":
+                        <p>By signing up, you agree to our Terms & conditions, Privacy policy</p>}
                     </div>
                 </div>
 
