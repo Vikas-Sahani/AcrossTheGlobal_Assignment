@@ -48,7 +48,7 @@ const apiInstance=[{
     date:"Fri, 12 Oct, 2018",
     location:"🛣️ Noida, India",
     views:1.4,
-    is3DClick:false,
+    isClicked:false,
 }]
 
 function Component43Dot(props){
@@ -78,12 +78,12 @@ export default function APIinstanceofCard(){
                     <div className="heading">
                         <h3>{obj.heading} </h3>
                         <span onClick={()=>{
-                            setisClick(obj.is3DClick?false:true);
-                            obj.is3DClick=isClick
+                            obj.isClicked=isClick
+                            setisClick(obj.isClicked?false:true);
                         }}>
                             <img src={dots3} alt="3dots"/>
                         </span>
-                        <Component43Dot isClick={obj.is3DClick}/>
+                        <Component43Dot isClick={obj.isClicked}/>
                     </div>
                     <p>{obj.desc} </p>
                     <div className="userDetail">

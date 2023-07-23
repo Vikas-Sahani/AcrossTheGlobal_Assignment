@@ -203,6 +203,111 @@ select{
   border-radius: 10px;
   border: 2px solid rgb(234, 234, 234);
 }
+
+.cardSideComp{
+  display: flex;
+  width: 1040px;
+  justify-content: space-between;
+}
+
+.locationEditErr{
+  display: flex;
+  width: 250px;
+}
+
+.location{
+  display: flex;
+}
+
+.location>input{
+  width: 70%;
+  border: none;
+}
+
+.location>hr{
+  position: absolute;
+  width: 15%;
+  top: 88.5%;
+  border: 1px solid #B8B8B8;
+}
+
+span.size{
+  display: flex;
+  height: 20px;
+  width: 20px;
+}
+
+.errOutline{
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin-top: 10%;
+}
+
+.errOutline{
+  font-size: small;
+}
   
+.LogRegPg{
+  position: fixed;
+  top: 0px;
+  left: 0px ;
+  z-index: 3;
+  border: 1px solid black;
+  height: 714px;
+  width: 1520px;
+  background: #495057;
+  opacity: 0.8;
+}
+
+.coverLogin{
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  width: 750px;
+  height: 553px; 
+  position: fixed;
+  top: 146px;
+  left: 352px;
+}
+
+.clear{
+  position: fixed;
+  top: 146px;
+  left: 1074px;
+  opacity: 0.800000011920929px;
+  height: 28px;
+  width: 28px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
 
 
+.logReg{
+
+}
+
+.logReg>p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 736px;
+  height: 50px;
+  position: fixed;
+  top: 186px;
+  left: 352px;
+  border-radius: 8px 8px 0px 0px;
+  background: #EFFFF4;
+  color: #008A45;
+}
+
+
+
+.LogRegImg>div{
+  width: 320px;
+  height: 320px;
+  position: fixed;
+  top: 315px;
+  left: 732px;
+
+}
