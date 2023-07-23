@@ -5,6 +5,9 @@ import SarahCardImg from "./images/SarahCardImg.png"
 import RonalJones from "./images/RonalJones.png"
 import RonalCardImg from "./images/RonalCardImg.png"
 import JosephGray from "./images/JosephGray.png"
+import dots3 from "./images/3dots.svg" 
+import viewImg from "./images/visibility_24px.svg"
+import shareImg from "./images/share24px.svg"
 
 const apiInstance=[{
     cardAvtar:sarthakCardImg,
@@ -12,7 +15,7 @@ const apiInstance=[{
     avtar: sarthakLogo,
     tilte:"✍️ Article",
     heading:"What if famous brands had regular fonts? Meet RegulaBrands!",
-    desc:"I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
+    desc:"I've worked in UX for the better part of a decade. From now on, I plan to rei…",
     views:1.4
 },{
     cardAvtar:SarahCardImg,
@@ -49,31 +52,40 @@ export default function NewApp(){
             return(
                 <div className="card" key={i}>
                     {obj.cardAvtar!==""?
-                        <div className="cardImg">
+                        <div className="cardAvtar">
                             <img src={obj.cardAvtar} alt="cardAvtar" />
                         </div>
                     :""}
                     
                     <p>{obj.tilte}</p>
-                    <div>
+                    <div className="heading">
                         <h3>{obj.heading} </h3>
-                        <span>...</span>
+                        <span>
+                            <img src={dots3} alt="3dots"/>
+                        </span>
                     </div>
                     <p>{obj.desc} </p>
-                    <div style={{display:"flex",}}>
-                        <div className="avtarImg">
-                            <img src={obj.avtar} alt="logo"/>
+                    <div className="userDetail">
+                        <div className="userImgName">
+                            <div className="avtarImg">
+                                <img src={obj.avtar} alt="logo"/>
+                            </div>
+                            <h4>{obj.name}</h4>
                         </div>
-                        <h4>{obj.name}</h4>
+                        <div className="viewsShares">
+                            <div className="views">
+                                <img src={viewImg} alt="views"/>
+                            </div>
+                            <span>{obj.views}k views </span>
+                            <div className="share">
+                                <img src={shareImg} alt="share"/>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             )
         })}
-        <div>
-            <img src={
-// logo
-                apiInstance[0].mainAvtar
-                } alt="logo"/>
-        </div>
+        
     </>)
 }

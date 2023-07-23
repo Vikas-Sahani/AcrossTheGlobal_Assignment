@@ -3,7 +3,7 @@ import "./App.css";
 import Nav from "./components/Nav/Nav.jsx";
 import Hero from "./components/Hero//Hero.jsx";
 import MidSection from "./components/MidSection/MidSection.jsx";
-import APIinstance from "./components/APIinstance/APIinstance.jsx";
+import APIinstance from "./components/APIinstance/APIinstanceofCard";
 
 const App = () => {
   return (
