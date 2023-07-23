@@ -129,33 +129,41 @@ select{
 
 .heading{
   display: flex;
+  justify-content: space-between;
   width: 650px;
   margin: 10px 20px;
+}
+
+.heading>h3{
+  width: 85%;
 }
 
 .heading> span{
   height: 28px;
   width: 28px;
+  background: #EDEEF0;
+  border-radius: 25%;
+  cursor: pointer;
 }
 
 .userDetail{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   width: 650px;
   margin: 10px 20px;
 }
 
 .userImgName{
   display: flex;
-  justify-content: space-between;
-  width: 35%;
+  justify-content: space-around;
+  min-width: 35%;
 }
+
 .avtarImg{
   width: 48px;
   height: 48px;
-  border-radius: 24px
+  border-radius: 24px;
 }
 
 .viewsShares{
@@ -177,9 +185,24 @@ select{
   height: 36px;
   border-radius: 2px;
   background: #EDEEF0;
+  cursor: pointer;
 }
 
 .share>img{
   height: 70%;
   width: 70%;
 }
+
+.component43Dot{
+  box-shadow: 7px 7px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 16%;
+  position: absolute;
+  left: 77%;
+  z-index: 2;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid rgb(234, 234, 234);
+}
+  
+
+
