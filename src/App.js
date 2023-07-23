@@ -5,7 +5,9 @@ import Hero from "./components/Hero//Hero.jsx";
 import MidSection from "./components/MidSection/MidSection.jsx";
 import APIinstance from "./components/APIinstance/APIinstanceofCard";
 import SideComponent from "./components/SideComponent/SideComponent";
-import LoginRegister from "./components/LoginRegister/LoginRegister";
+import Register from "./components/Register/Register.jsx";
+import Login from "./components/Login/Login.jsx";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
@@ -19,7 +21,11 @@ const App = () => {
           <APIinstance />
           <SideComponent />
         </div>
-        <LoginRegister />
+
+        <Routes>
+          <Route path="sign-up" element={<Register />} />
+          <Route path="sign-in" element={<Login />} />
+        </Routes>
       </div>
     </>
   );

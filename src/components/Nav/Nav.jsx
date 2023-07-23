@@ -2,8 +2,10 @@ import whole from "./Images/whole.svg";
 import searchIcon from "./Images/baseline-search-24px.svg";
 
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 function Nav() {
+  const navigate = useNavigate();
   return (
     <>
         <nav>
@@ -21,7 +23,9 @@ function Nav() {
           </div>
           <div className="register">
             <p>
-              Create account. <span>It's free!</span>
+              Create account. <span onClick={()=>{
+                navigate("/sign-up");
+              }}>It's free!</span>
             </p>
             <select>
               <option>1</option>
